@@ -13,14 +13,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - platform: linuxbsd
-            target: debug
-            arch: x86_64
-
-          - platform: linuxbsd
-            target: release
-            arch: x86_64
-
           - platform: windows
             target: debug
             arch: x86_64
@@ -28,14 +20,6 @@ jobs:
           - platform: windows
             target: release
             arch: x86_64
-
-          - platform: macos
-            target: debug
-            arch: universal
-
-          - platform: macos
-            target: release
-            arch: universal
     steps:
       - name: Download deploy_release_url
         uses: actions/download-artifact@v4
